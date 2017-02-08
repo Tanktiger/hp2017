@@ -50,16 +50,17 @@ gotoByScroll();
             dataType: "json"
         });
         request.done(function( data ) {
-            if (data.success == true) {
-                $( "#statusMessages .statusMsg" ).html( data.msg).css('color', 'green');
+            if (data.success == true || data.success == "true") {
+                $( "#contactSuccess" ).show();
+                $("#contact").hide();
             } else {
-                if (data.mail == false) {
+                if (data.mail == false || data.mail == "false") {
                     $( "#statusMessages").append('<p class="statusMsg">Ihre Emailadresse ist nicht korrekt!</p>');
                 }
-                if (data.name == false) {
+                if (data.name == false || data.name == "false") {
                     $( "#statusMessages").append('<p class="statusMsg">Ihr Name fehlt!</p>');
                 }
-                if (data.text == false) {
+                if (data.text == false || data.text == "false") {
                     $( "#statusMessages").append('<p class="statusMsg">Ihre Nachricht fehlt!</p>');
                 }
             }
