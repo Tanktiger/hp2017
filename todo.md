@@ -1,0 +1,5 @@
+- Language filter
+- Einleitungstext anpassen
+- Impressum
+- AGB
+- Kontaktform
