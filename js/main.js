@@ -13,7 +13,7 @@ gotoByScroll();
     var date = new Date();
     var totalDays = (date.getFullYear() - 2011) * 365;
     var eatCount = totalDays / 10;
-    var coffeeCount = (totalDays * 0.8) / 10;
+    var coffeeCount = (totalDays * 0.8) / 5;
     var sunCount = ((totalDays - (totalDays * (2/7))) * 24) / 10;
 
     $('#eatCount').text(Math.floor(eatCount));
